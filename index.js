@@ -44,12 +44,14 @@ function removeFromCart(item) {
   var n = "wait";
   while (i<cart.length){
     if(cart[i].itemName !== item){
+      console.log(`${cart[i].itemName} is not ${item}. Continuing check...`);
+      i++;
+      
       n = i;
       console.log(`${cart[i].itemName} is ${item}. Ending.`);
       break;
     }else{
-      console.log(`${cart[i].itemName} is not ${item}. Continuing check...`);
-      i++;
+      
     }
   }
   if (Number.isInteger(n)) {
