@@ -39,6 +39,9 @@ function total() {
   return s;
 }
 
+
+/* why the fuck does the function viewCart run first??
+
 function removeFromCart(item) {
   var q = 0;
   var n = "wait";
@@ -59,6 +62,21 @@ function removeFromCart(item) {
   }
   return "end instruction";
 }
+
+*/
+
+
+function removeFromCart(item){
+  var stringArray = [];
+    for (var i=0; i<cart.length; i++){
+      stringArray.push(cart[i].itemName);
+    }
+    return stringArray;
+}
+
+
+
+
 
 function placeOrder(cardNumber) {
   // write your code here
