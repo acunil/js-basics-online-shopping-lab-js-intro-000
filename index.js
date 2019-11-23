@@ -68,7 +68,7 @@ function removeFromCart(item) {
 
 function removeFromCart(item){
   var stringArray = [];
-  var q = -1;
+  var q;
     for (var i=0; i<cart.length; i++){
       stringArray.push(cart[i].itemName);
     }
