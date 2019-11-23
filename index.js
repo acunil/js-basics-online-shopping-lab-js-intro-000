@@ -45,7 +45,7 @@ function removeFromCart(item) {
   while (q<cart.length+1){
     if(cart[q].itemName !== item){
       console.log(`${cart[q].itemName} is not ${item}. Continuing check...`);
-      console.log(i);
+      console.log(q);
       q++;
     } else if (cart[q].itemName == item){
       n = q;
@@ -53,7 +53,7 @@ function removeFromCart(item) {
        cart.splice(cart[n], 1);
        return viewCart();
       }
-    } else if (i == cart.length+1){
+    } else if (q == cart.length+1){
       return "That item is not in your cart.";
     }
   }
