@@ -40,10 +40,10 @@ function total() {
 }
 
 function removeFromCart(item) {
-  var n = "";
+  var n = 0;
   var i = 0;
-  for (var i = 0; i<cart.length; i++){
-    
+  while (i<cart.length){
+    cart[i].itemName == item ? n = i : i++ ;
   }
   
   return "That item is not in your cart.";
