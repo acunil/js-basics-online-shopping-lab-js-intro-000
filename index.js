@@ -46,6 +46,7 @@ function removeFromCart(item) {
       cart.splice(cart[i], 1);
       return viewCart();
     }else{
+      console.log(`${cart[i].itemName} is not ${item}. Continuing check...`);
       i++;
     }
   }
