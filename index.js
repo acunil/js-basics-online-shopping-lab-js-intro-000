@@ -46,12 +46,10 @@ function removeFromCart(item) {
     if(cart[i].itemName !== item){
       console.log(`${cart[i].itemName} is not ${item}. Continuing check...`);
       i++;
-      
+    } else if (cart[i].itemName == item){
       n = i;
       console.log(`${cart[i].itemName} is ${item}. Ending.`);
       break;
-    }else{
-      
     }
   }
   if (Number.isInteger(n)) {
