@@ -65,4 +65,9 @@ function placeOrder(cardNumber) {
 }
 
 
-
+addToCart("one");
+addToCart("two");
+addToCart("three");
+addToCart("four");
+addToCart("five");
+addToCart("six");
