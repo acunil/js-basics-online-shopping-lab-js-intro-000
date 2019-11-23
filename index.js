@@ -43,7 +43,7 @@ function removeFromCart(item) {
   var i = 0;
   var n = "wait";
   while (i<cart.length){
-    if(cart[i].itemName == item){
+    if(cart[i].itemName !== item){
       n = i;
       console.log(`${cart[i].itemName} is ${item}. Ending.`);
       break;
