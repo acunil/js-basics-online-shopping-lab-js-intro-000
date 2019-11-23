@@ -40,11 +40,12 @@ function total() {
 }
 
 function removeFromCart(item) {
-  if (cart.includes(item)){
-    var q = cart.indexOf(item);
-    cart.splice(q, 1);
-    return cart;
+  var n = "";
+  var i = 0;
+  for (var i = 0; i<cart.length; i++){
+    
   }
+  
   return "That item is not in your cart.";
 }
 
