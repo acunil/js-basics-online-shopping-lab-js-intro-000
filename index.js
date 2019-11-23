@@ -40,12 +40,10 @@ function total() {
 }
 
 function removeFromCart(item) {
-  var n = 0;
   var i = 0;
   while (i<cart.length){
     if(cart[i].itemName == item){
-      n = i;
-      cart.splice(cart[n], 1);
+      cart.splice(cart[i], 1);
       return viewCart();
     }else{
       i++;
