@@ -51,7 +51,7 @@ function removeFromCart(item) {
       i++;
     }
   }
-  if (Number(n)) {
+  if (Number.isInteger(n)) {
     cart.splice(cart[n], 1);
     return viewCart();
     }else{
