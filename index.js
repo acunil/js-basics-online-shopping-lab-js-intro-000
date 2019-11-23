@@ -77,7 +77,7 @@ function removeFromCart(item){
     console.log (q);
     console.log(cart[q]);
     cart.splice(q, 1);
-    return `${item} removed.`;
+    return viewCart();
   } else {
     return "That item is not in your cart.";
   }
