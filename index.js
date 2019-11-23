@@ -40,9 +40,12 @@ function total() {
 }
 
 function removeFromCart(item) {
-  if (){
-    
+  if (cart.includes(item)){
+    let i = cart.indexOf(item);
+    cart.splice(item, 0);
+    return cart;
   }
+  return "That item is not in your cart.";
 }
 
 function placeOrder(cardNumber) {
