@@ -52,7 +52,7 @@ function removeFromCart(item) {
       n = q;
       console.log(n);
       cart.splice(cart[n], 1);
-      return viewCart();
+      return contents;
     } else if (q == cart.length+1){
       return "That item is not in your cart.";
     }
