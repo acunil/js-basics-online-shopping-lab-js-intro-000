@@ -42,7 +42,7 @@ function total() {
 function removeFromCart(item) {
   var i = 0;
   var n = "wait";
-  while (i<cart.length){
+  while (i<cart.length+1){
     if(cart[i].itemName !== item){
       console.log(`${cart[i].itemName} is not ${item}. Continuing check...`);
       i++;
@@ -50,13 +50,15 @@ function removeFromCart(item) {
       n = i;
       console.log(`${cart[i].itemName} is ${item}. Ending.`);
       break;
+    } else if (i == cart.length+1){
+      return "That item is not in your cart.";
     }
   }
   if (Number.isInteger(n)) {
     cart.splice(cart[n], 1);
     return viewCart();
     }else{
-      return "That item is not in your cart.";
+      
     }
 }
 
