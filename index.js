@@ -48,18 +48,12 @@ function removeFromCart(item) {
       i++;
     } else if (cart[i].itemName == item){
       n = i;
-      console.log(`${cart[i].itemName} is ${item}. Ending.`);
-      break;
+      cart.splice(cart[n], 1);
+      return viewCart();
     } else if (i == cart.length+1){
       return "That item is not in your cart.";
     }
   }
-  if (Number.isInteger(n)) {
-    cart.splice(cart[n], 1);
-    return viewCart();
-    }else{
-      
-    }
 }
 
 function placeOrder(cardNumber) {
