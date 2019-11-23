@@ -45,10 +45,11 @@ function removeFromCart(item) {
   while (i<cart.length+1){
     if(cart[i].itemName !== item){
       console.log(`${cart[i].itemName} is not ${item}. Continuing check...`);
+      console.log(i);
       i++;
     } else if (cart[i].itemName == item){
       n = i;
-      
+      break;
     } else if (i == cart.length+1){
       return "That item is not in your cart.";
     }
