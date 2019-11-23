@@ -68,11 +68,17 @@ function removeFromCart(item) {
 
 function removeFromCart(item){
   var stringArray = [];
+  var q = -1;
     for (var i=0; i<cart.length; i++){
       stringArray.push(cart[i].itemName);
     }
-    stringArray.
-    return stringArray;
+  q = stringArray.indexOf(item);
+  if (q >= 0){
+    cart.splice(cart[q], 1);
+    return `${item} removed.`;
+  } else {
+    return "That item is not in your cart.";
+  }
 }
 
 
