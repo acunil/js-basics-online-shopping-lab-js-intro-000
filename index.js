@@ -50,10 +50,8 @@ function removeFromCart(item) {
     } else if (cart[q].itemName == item){
       n = q;
       console.log(n);
-      if (Number.isInteger(n)){
-       cart.splice(cart[n], 1);
-       return viewCart();
-      }
+      cart.splice(cart[n], 1);
+      return viewCart();
     } else if (q == cart.length+1){
       return "That item is not in your cart.";
     }
