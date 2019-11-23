@@ -45,6 +45,7 @@ function removeFromCart(item) {
   while (i<cart.length){
     if(cart[i].itemName == item){
       n = i;
+      console.log(`${cart[i].itemName} is ${item}. Ending.`);
       break;
     }else{
       console.log(`${cart[i].itemName} is not ${item}. Continuing check...`);
