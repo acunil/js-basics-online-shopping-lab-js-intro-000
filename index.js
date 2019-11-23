@@ -46,6 +46,7 @@ function removeFromCart(item) {
     if(cart[i].itemName == item){
       n = i;
       cart.splice(cart[n], 1);
+      return viewCart();
     }else{
       i++;
     }
