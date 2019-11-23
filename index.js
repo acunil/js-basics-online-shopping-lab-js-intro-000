@@ -42,6 +42,7 @@ function total() {
 function removeFromCart(item) {
   var q = 0;
   var n = "wait";
+  var contents = viewCart();
   while (q<cart.length+1){
     if(cart[q].itemName !== item){
       console.log(`${cart[q].itemName} is not ${item}. Continuing check...`);
