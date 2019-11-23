@@ -44,6 +44,7 @@ function removeFromCart(item) {
   var i = 0;
   while (i<cart.length){
     cart[i].itemName == item ? n = i : i++ ;
+    console.log(cart[i].itemName)
   }
   
   return "That item is not in your cart.";
