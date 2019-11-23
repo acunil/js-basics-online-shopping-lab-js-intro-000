@@ -43,9 +43,9 @@ function total() {
 function removeFromCart(item){
   var stringArray = [];
   var q;
-    for (var i=0; i<cart.length; i++){
-      stringArray.push(cart[i].itemName);
-    }
+  for (var i=0; i<cart.length; i++){
+    stringArray.push(cart[i].itemName);
+  }
   q = stringArray.indexOf(item);
   if (q >= 0){
     cart.splice(q, 1);
