@@ -40,32 +40,6 @@ function total() {
 }
 
 
-/* why the fuck does the function viewCart run first??
-
-function removeFromCart(item) {
-  var q = 0;
-  var n = "wait";
-  var contents = viewCart();
-  while (q<cart.length+1){
-    if(cart[q].itemName !== item){
-      console.log(`${cart[q].itemName} is not ${item}. Continuing check...`);
-      console.log(q);
-      q++;
-    } else if (cart[q].itemName == item){
-      n = q;
-      console.log(n);
-      cart.splice(cart[n], 1);
-      return contents;
-    } else if (q == cart.length+1){
-      return "That item is not in your cart.";
-    }
-  }
-  return "end instruction";
-}
-
-*/
-
-
 function removeFromCart(item){
   var stringArray = [];
   var q;
@@ -74,17 +48,12 @@ function removeFromCart(item){
     }
   q = stringArray.indexOf(item);
   if (q >= 0){
-    console.log (q);
-    console.log(cart[q]);
     cart.splice(q, 1);
     return viewCart();
   } else {
     return "That item is not in your cart.";
   }
 }
-
-
-
 
 
 function placeOrder(cardNumber) {
