@@ -40,15 +40,15 @@ function total() {
 }
 
 function removeFromCart(item) {
-  var i = 0;
+  var q = 0;
   var n = "wait";
-  while (i<cart.length+1){
-    if(cart[i].itemName !== item){
-      console.log(`${cart[i].itemName} is not ${item}. Continuing check...`);
+  while (q<cart.length+1){
+    if(cart[q].itemName !== item){
+      console.log(`${cart[q].itemName} is not ${item}. Continuing check...`);
       console.log(i);
-      i++;
-    } else if (cart[i].itemName == item){
-      n = i;
+      q++;
+    } else if (cart[q].itemName == item){
+      n = q;
       if (Number.isInteger(n)){
        cart.splice(cart[n], 1);
        return viewCart();
