@@ -51,7 +51,7 @@ function removeFromCart(item) {
       i++;
     }
   }
-  if (n===0) {
+  if (Number(n)) {
     cart.splice(cart[n], 1);
     return viewCart();
     }else{
